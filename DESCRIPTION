@@ -1,0 +1,12 @@
+Package: ForestVisuals
+Type: Package
+Title: Simple 3D visualization of forest stands using tree3d() R package
+Version: 0.1.0
+Author: Bohdan Kolinyk
+Maintainer: The package maintainer <bohdan_Kolisnyk@sggw.edu.pl>
+Description: Just simple way to visualize your forest stand having conventinal forest inventory data.
+License: WTFPL
+Encoding: UTF-8
+LazyData: true
+Depends: 
+    R (>= 2.10)
