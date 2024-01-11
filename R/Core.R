@@ -1,14 +1,16 @@
 Show_me_your_forest <- function(X, Y, Z, shape, Crown_height_m, DBH_mm, Total_tree_height, Crown_projection_m2, solid, colour_trunk, colour_crown, filename) {
 
-  # No need to use library() or require() here.
+require(rgl)
+require(akima)
+require(tree3d)
 
-  # Create the terrain surface
+  # Creating the terrain surface
   rgl::open3d()
   a_mat <- akima::interp(X, Y, Z)
   rgl::surface3d(x = a_mat$x, y = a_mat$z, z = a_mat$y, col = "#D5CA8B", alpha = 1)
   rgl::view3d(theta = 90)
 
-  # Loop through and display each tree
+  # Looingp through and displaying each tree
   for (i in 1:length(X)) {
     my_tree_trunk <- tree_mesh(
       shape[i],
