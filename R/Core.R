@@ -25,10 +25,10 @@ Show_me_your_forest <- function(X, Y, Z,
                                crown_height = Total_tree_height[i] - Crown_height_m[i],
                                crown_width = 2 * sqrt(Crown_projection_m2[i]/pi),
                                solid = solid[i], ambient_intensity = 0.3, crown_color = colour_crown[i])
-    write_tree_to_obj(my_tree_crown, "my_tree_crown", materials = TRUE,
+    tree3d::write_tree_to_obj(my_tree_crown, "my_tree_crown", materials = TRUE,
                       fileext = ".obj")
     my_tree_obj2 <- suppressWarnings(readOBJ("my_tree_crown.obj"))
-    shade3d(my_tree_obj2, col = colour_crown[i])
+    rgl:shade3d(my_tree_obj2, col = colour_crown[i])
 
     unlink("my_tree_crown.obj")
     unlink("my_tree_crown.mtl")
