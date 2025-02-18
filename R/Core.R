@@ -32,8 +32,7 @@ Show_me_your_forest <- function(X, Y, Z,
 
     unlink("my_tree_crown.obj")
     unlink("my_tree_crown.mtl")
-    unlink("my_tree_trunk.obj")
-    unlink("my_tree_trunk.mtl")
+
   }
   htmlwidgets::saveWidget(rgl::rglwidget(width = 520, height = 520),
                           file = paste0(filename, ".html"),
