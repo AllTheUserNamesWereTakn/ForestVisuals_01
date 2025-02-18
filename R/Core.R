@@ -1,7 +1,7 @@
 Show_me_your_forest <- function(X, Y, Z,
                                 shape, solid, colour_trunk, colour_crown,
                                 DBH_mm, Total_tree_height,
-                                Crown_base_height_m,  Crown_projection_m2, filename) {
+                                Crown_height_m,  Crown_projection_m2, filename) {
 
 
 
