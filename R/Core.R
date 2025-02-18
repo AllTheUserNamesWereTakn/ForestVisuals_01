@@ -18,9 +18,9 @@ Show_me_your_forest <- function(X, Y, Z,
       radius = c(DBH_mm[i] / 2000, DBH_mm[i] / 8000),
       closed = -2
     )
-    shade3d(my_tree_trunk, col = colour_trunk[i])
+    rgl::shade3d(my_tree_trunk, col = colour_trunk[i])
 
-    my_tree_crown <- tree_mesh(shape[i], position = c(  X[i], Z[i],  -Y[i]),
+    my_tree_crown <- tree3d::tree_mesh(shape[i], position = c(  X[i], Z[i],  -Y[i]),
                                trunk_height = Crown_height_m[i], trunk_width = 0,
                                crown_height = Total_tree_height[i] - Crown_height_m[i],
                                crown_width = 2 * sqrt(Crown_projection_m2[i]/pi),
