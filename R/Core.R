@@ -28,6 +28,7 @@ Show_me_your_forest <- function(X, Y, Z,
     tree3d::write_tree_to_obj(my_tree_crown, "my_tree_crown", materials = TRUE,
                       fileext = ".obj")
     my_tree_obj2 <- suppressWarnings(rgl::readOBJ("my_tree_crown.obj"))
+
     rgl:shade3d(my_tree_obj2, col = colour_crown[i])
 
     unlink("my_tree_crown.obj")
